@@ -53,6 +53,7 @@ src/mgait/            analysis package
 scripts/              run_audit.py, build_cache.py, build_notebooks.py
 notebooks/            01-06 executed notebooks (sources in notebooks/source)
 results/              figures/ and tables/ produced by the notebooks
+presentation/         board deck: editable PowerPoint, PDF, and the script that builds the deck
 tests/                unit tests on synthetic signals
 ```
 
@@ -63,6 +64,10 @@ decisions (adopt the IMU suit as the primary platform, retain force plates as th
 behind a validation gate, govern gait data as biometric personal data), with a phased plan whose gates are
 set from this study's results, a risk register and a method appendix. Every figure and number on the slides
 is produced by the notebooks in this repository.
+
+* `presentation/gait_sensing_board_paper.pptx` - editable deck with native charts, rebuilt from the result tables by
+  `python presentation/build_deck.py`
+* `presentation/Gait Sensing Board Paper.pdf` - PDF for circulation
 
 ## Notebooks
 
@@ -103,6 +108,7 @@ Obtain the dataset and set the paths as described in [DATASET.md](DATASET.md), t
 .venv\Scripts\python scripts\build_cache.py
 .venv\Scripts\python scripts\build_notebooks.py
 .venv\Scripts\python -m pytest
+.venv\Scripts\python presentation\build_deck.py
 ```
 
 The audit and cache take under a minute on a 16-core machine; executing all notebooks takes about five minutes.
