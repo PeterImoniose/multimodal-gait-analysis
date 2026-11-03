@@ -1,0 +1,21 @@
+Modality,Issue,Scope,Treatment,Status
+All,Missing trials,15 of 177 trials lack at least one modality,Each analysis uses the trials available to it; multimodal analyses use the 162 complete trials,Documented
+Metadata,Summary rows mislabelled,Min and Max summary rows are swapped,Summary rows removed on load,Corrected
+Metadata,Age not at testing,"Age matches 1 Jan 2025, about a year after testing; 2 DOB formats",Age used descriptively only,Documented
+Metadata,Dates of birth released,59 full dates of birth despite the anonymisation statement,Used only to verify age; dropped from all outputs,Mitigated
+EEG,Corrupted montage header,S32_1 (CSV and EDF),Excluded,Excluded
+EEG,15 s timing gap,S8_0.5,Excluded from spectral analysis,Excluded
+EEG,EDF and CSV differ,"All EDF files: shifted 40 samples (133 ms), truncated to 58 s",CSV used throughout,Documented
+EMG,Envelope only,MAV at 16 Hz released instead of raw EMG,Timing and amplitude analysis only,Documented
+EMG,Noise-dominated channels,55 channel-trials (>5x muscle median),Channel set to missing,Excluded
+EMG,Pilot trials longer,S1-S3: 61-70 s instead of 60 s,Analysed on their own timeline,Documented
+Force plates,No timestamps,Timestamp/sync/aux columns all zero,Time from sample index,Corrected
+Force plates,Missing header,S2 (3 files); different COP origin,Standard columns assigned,Corrected
+Force plates,Unzeroed plates,"S4, S5, S7, S21, S57 (one plate -70 to -270 N)",Swing-phase re-zeroing,Corrected
+Force plates,Swapped left/right plates,S5 (3 trials),Relabelled (COP and IMU evidence),Corrected
+Metadata,Body mass inconsistent,S24: 110 kg measured vs 92.4 kg reported,Measured body weight used,Corrected
+Force plates,Short recordings,"S1 (50-57 s), S4_0.75, S35_0.75",Analysed as recorded,Documented
+IMU,Empty export files,"S46_1, S47 (all speeds)",Only intact files used,Documented
+IMU,Foot stream failure,S53_1 right foot,No IMU strides for that trial,Excluded
+IMU,Processing mode differs,"S1-S3 exported in HD mode, others Live",Pilot flag kept in analyses,Documented
+Synchronisation,Treadmill started by hand,11 of 168 trials offset by more than 0.1 s,Force-plate timing used only within force-plate analyses for those trials; EMG/EEG use IMU events,Mitigated

@@ -1,0 +1,16 @@
+# Raw data are not redistributed; see DATASET.md for how to obtain them
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Tools / OS
+.vscode/
+Thumbs.db
+.DS_Store

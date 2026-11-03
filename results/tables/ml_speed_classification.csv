@@ -1,0 +1,13 @@
+features,model,n_features,balanced accuracy (subject-wise),95% CI,balanced accuracy (record-wise)
+Force plates,Logistic regression,18,0.9745414462081129,0.94 to 1.00,0.9745414462081129
+Force plates,Random forest,18,0.9871604938271604,0.97 to 1.00,0.9933333333333333
+IMU,Logistic regression,15,0.885379188712522,0.84 to 0.93,0.8925396825396826
+IMU,Random forest,15,0.8809082892416226,0.82 to 0.94,0.873747795414462
+EMG,Logistic regression,18,0.5456172839506173,0.49 to 0.60,0.5016931216931217
+EMG,Random forest,18,0.6699999999999999,0.60 to 0.75,0.5705820105820106
+EEG (band power),Logistic regression,30,0.49074074074074076,0.43 to 0.56,0.4243298059964727
+EEG (band power),Random forest,30,0.4678130511463845,0.41 to 0.52,0.38106701940035276
+EEG artefact indices only,Logistic regression,10,0.6214638447971782,0.55 to 0.69,0.5962257495590829
+EEG artefact indices only,Random forest,10,0.5961728395061728,0.52 to 0.67,0.5895590828924162
+Force plates + IMU + EMG,Logistic regression,51,1.0,1.00 to 1.00,1.0
+Force plates + IMU + EMG,Random forest,51,0.974320987654321,0.94 to 1.00,0.9871604938271604

@@ -1,0 +1,3 @@
+model,strides,random stride split,participant-wise split,overstatement (points)
+Logistic regression,14964,0.9265454547027286,0.9039044835649589,2.264097113776975
+Random forest,14964,0.9762277541766898,0.8482276398322276,12.800011434446223
